@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Roboto-Thin", Times, serif;
+  src: url("/fonts/Roboto/Roboto-Thin.ttf") format(ttf);
+}
+@font-face {
+  font-family: "Roboto-Regular", Times, serif;
+  src: url("/fonts/Roboto/Roboto-Regular.ttf") format(ttf);
+}
+@font-face {
+  font-family: "Roboto-Bold", Times, serif;
+  src: url("/fonts/Roboto/Roboto-Bold.ttf") format(ttf);
+}
+@font-face {
+  font-family: "Shrikhand-Regular", Times, serif;
+  src: url("/fonts/Shrikhand/Shrikhand-Regular.ttf") format(ttf);
+}
+.header {
+  text-align: center;
+  flex-wrap: wrap;
+}
+.header .logo {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  width: 45%;
+}
+.header__location {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
+  font-size: 16px;
+  font-family: Roboto-Regular;
+  background-color: rgba(236, 236, 230, 0.9647058824);
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-right: 30px;
+  box-shadow: inset 0 2px 2px lightgrey;
+}
+.header__title {
+  background-color: rgb(241, 241, 241);
+  padding: 30px 30px 50px 30px;
+}
+.header h1 {
+  font-size: 25px;
+  font-family: Roboto-Bold;
+  padding-bottom: 35px;
+}
+.header .header__byline {
+  font-size: 18px;
+  font-family: Roboto-Thin;
+  padding-bottom: 30px;
+}
+.header button {
+  font-size: 18px;
+  font-family: Roboto-Regular;
+  border-radius: 40px;
+  color: white;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0 5px 8px 2px lightgrey;
+  border-style: none;
+  cursor: pointer;
+  padding: 15px 25px;
+}
+
+.nav {
+  padding: 30px 10px 40px 20px;
+}
+.nav h2 {
+  font-size: 25px;
+  font-family: Roboto-Bold;
+}
+.nav_list {
+  padding-top: 20px;
+}
+.nav_btn {
+  margin-left: -20px;
+  margin-bottom: 20px;
+}
+.nav button {
+  border-radius: 20px;
+  width: 90%;
+  text-align: left;
+  border-style: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: Roboto-Regular;
+  box-shadow: 0 0 10px 2px lightgrey;
+  background-color: rgb(241, 241, 241);
+  padding: 25px;
+}
+.nav .icon {
+  border-radius: 100%;
+  padding: 5px 8px;
+  background: #9356DC;
+  font-size: 10px;
+  position: relative;
+  right: -15px;
+}
+.nav .fa-3 {
+  padding: 5px 6px;
+}
+.nav .icon-btn {
+  padding-left: 5px;
+  padding-right: 15px;
+}/*# sourceMappingURL=main.css.map */
