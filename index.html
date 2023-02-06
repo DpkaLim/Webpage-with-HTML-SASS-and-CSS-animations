@@ -1,49 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <title>ohmyfood homepage</title>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="./css/main.css">
-      <link href="/normalize.css" type="text/css" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-   </head>
+
+<head>
+    <title>ohmyfood homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="/normalize.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
 </html>
-<body> 
-    <header class="header">
-        <img class="logo" src="images/logo/ohmyfood.png" sizes="100vw" alt="logo"
-        srcset="images/logo/ohmyfood.png 320w,images/logo/ohmyfood.png 480w,images/logo/ohmyfood@2x.svg 760w,images/logo/ohmyfood@2x.svg 992w">
-        <div class="header__location"> 
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Paris, Belleville</p>
-        </div>
-        <div class="header__title">
-            <div class="header_heading"> 
-                <h1>Book the menu you like</h1>
+
+<body>
+    <div class="spinner spinner-hidden">
+        <div class="spinner__ring"></div>
+    </div>
+    <div class="wrap">
+        <header class="header">
+            <img class="header__logo" src="images/logo/ohmyfood.png" sizes="100vw" alt="logo"
+                srcset="images/logo/ohmyfood.png 320w,images/logo/ohmyfood.png 480w,images/logo/ohmyfood@2x.svg 760w,images/logo/ohmyfood@2x.svg 992w">
+            <div class="header__location">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Paris, Belleville</p>
             </div>
-            <div class="header__byline">
-                <p>Discover top-of-the-art restaurants we picked for you</p>
+            <div class="header__title">
+                <h1 class="header__heading">Book the menu you like</h1>
+                <p class="header__byline">Discover top-of-the-art restaurants we picked for you</p>
+                <button class="header__mainbtn">Explore our restaurants</button>
             </div>
-            <div class="header__button">
-            <button>Explore our restaurants</button>
+        </header>
+        <nav class="nav">
+            <h2 class="nav__heading">How it works</h2>
+            <div class="nav__list">
+                <div class="nav__btn-container">
+                    <i class="nav__icon fa-solid fa-1"></i>
+                    <button class="nav__btn"><i
+                            class="nav__btn-grey fa-solid fa-mobile-screen-button nav__icon-btn"></i> Chose a
+                        restaurant</button>
+                </div>
+                <div class="nav__btn-container">
+                    <i class="nav__icon fa-solid fa-2"></i>
+                    <button class="nav__btn"><i class="nav__btn-grey fa-solid fa-list-ul nav__icon-btn"></i> Create your
+                        menu</button>
+                </div>
+                <div class="nav__btn-container">
+                    <i class="nav__icon fa-solid nav__icon-fa3 fa-3"></i>
+                    <button class="nav__btn"><i class="nav__btn-grey fa-solid fa-store nav__icon-btn"></i> Go enjoy it
+                        at the restaurant</button>
+                </div>
             </div>
-        </div>
-    </header>
-    <div class="nav"> 
-        <h2>How it works</h2>
-        <div class="nav_list">
-            <div class="nav_btn">
-                <i class="icon fa-solid fa-1"></i>
-                <button><i class="fa-solid fa-mobile-screen-button icon-btn"></i> Chose a restaurant</button>
-            </div>  
-            <div class="nav_btn">
-                <i class="icon fa-solid fa-2"></i>
-                <button><i class="fa-solid fa-list-ul icon-btn"></i> Create your menu</button>
-            </div> 
-            <div class="nav_btn">
-                <i class="icon fa-solid fa-3"></i>
-                <button><i class="fa-solid fa-store icon-btn"></i> Go enjoy it at the restaurant</button>
-            </div>    
-        </div>
+        </nav>
+        <section class="container">
+            <h3 class="container__heading">Restaurants</h3>
+            <div class="container__card">
+                <div class="container__icon">
+                    <img class="container__img" src="./images/restaurants/palette.jpg" alt="The Full Palette">
+                    <p class="container__new">New</p>
+                </div>
+                <div class="container__text">
+                    <p class="container__title">The Full Palette</p>
+                    <div class="container__heart--wrap">
+                        <i class="fa-solid fa-heart container__heart"></i>
+                        <i class="fa-regular fa-heart container__heart"></i>
+                    </div>
+                </div>
+                <p class="container__byline">New York</p>
+            </div>
+            <div class="container__card">
+                <div class="container__icon">
+                    <img class="container__img" src="./images/restaurants/enchanted.jpg" alt="The Enchanted Plate">
+                    <p class="container__new">New</p>
+                </div>
+                <div class="container__text">
+                    <p class="container__title">The Enchanted Plate</p>
+                    <i class="fa-regular fa-heart container__heart"></i>
+                </div>
+                <p class="container__byline">New York</p>
+            </div>
+            <div class="container__card">
+                <div class="container__icon">
+                    <img class="container__img" src="./images/restaurants/bastille.jpg" alt="Bastille">
+                </div>
+                <div class="container__text">
+                    <p class="container__title">Bastille</p>
+                    <i class="fa-regular fa-heart container__heart"></i>
+                </div>
+                <p class="container__byline">New York</p>
+            </div>
+            <div class="container__card">
+                <div class="container__icon">
+                    <img class="container__img" src="./images/restaurants/gourmand.jpg" alt="Le Gourmand">
+                </div>
+                <div class="container__text">
+                    <p class="container__title">Le Gourmand</p>
+                    <i class="fa-regular fa-heart container__heart"></i>
+                </div>
+                <p class="container__byline">New York</p>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__container">
+                <img class="footer__logo" src="images/logo/ohmyfood.png" sizes="100vw" alt="logo"
+                    srcset="images/logo/ohmyfood.png 320w,images/logo/ohmyfood.png 480w,images/logo/ohmyfood@2x.svg 760w,images/logo/ohmyfood@2x.svg 992w">
+                <div class="footer__text">
+                    <div class="footer__flex">
+                        <i class="fa-solid fa-utensils footer__icon"></i>
+                        <p class="footer__p">Suggest a restaurant</p>
+                    </div>
+                    <div class="footer__flex2">
+                        <i class="fa-solid fa-handshake-angle footer__icon"></i>
+                        <p class="footer__p">Become a partner</p>
+                    </div>
+                    <p class="footer__p">Legal</p>
+                    <p class="footer__p">Contact</p>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>

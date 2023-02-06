@@ -4,6 +4,18 @@
   padding: 0;
 }
 
+*,
+*:before, *:after,
+html {
+  box-sizing: border-box;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
 @font-face {
   font-family: "Roboto-Thin", Times, serif;
   src: url("/fonts/Roboto/Roboto-Thin.ttf") format(ttf);
@@ -24,18 +36,18 @@
   text-align: center;
   flex-wrap: wrap;
 }
-.header .logo {
+.header__logo {
   padding-top: 20px;
   padding-bottom: 10px;
   width: 45%;
 }
 .header__location {
+  font-size: 16px;
+  font-family: Roboto-Regular;
   display: flex;
   justify-content: center;
   text-align: center;
   gap: 15px;
-  font-size: 16px;
-  font-family: Roboto-Regular;
   background-color: rgba(236, 236, 230, 0.9647058824);
   padding-top: 14px;
   padding-bottom: 14px;
@@ -46,19 +58,19 @@
   background-color: rgb(241, 241, 241);
   padding: 30px 30px 50px 30px;
 }
-.header h1 {
+.header__heading {
   font-size: 25px;
   font-family: Roboto-Bold;
   padding-bottom: 35px;
 }
-.header .header__byline {
+.header__byline {
   font-size: 18px;
   font-family: Roboto-Thin;
   padding-bottom: 30px;
 }
-.header button {
+.header__mainbtn {
   font-size: 18px;
-  font-family: Roboto-Regular;
+  font-family: Roboto-bold;
   border-radius: 40px;
   color: white;
   background-image: linear-gradient(#FF79DA, #9356DC);
@@ -67,22 +79,27 @@
   cursor: pointer;
   padding: 15px 25px;
 }
+.header__mainbtn:hover {
+  background-image: linear-gradient(#a07acf, #f892db);
+  box-shadow: 2px 2px 6px 2px #a07acf;
+}
 
 .nav {
-  padding: 30px 10px 40px 20px;
+  padding: 40px 10px 40px 20px;
 }
-.nav h2 {
+.nav__heading {
+  padding-bottom: 25px;
   font-size: 25px;
   font-family: Roboto-Bold;
 }
-.nav_list {
+.nav__list {
   padding-top: 20px;
 }
-.nav_btn {
+.nav__btn-container {
   margin-left: -20px;
   margin-bottom: 20px;
 }
-.nav button {
+.nav__btn {
   border-radius: 20px;
   width: 90%;
   text-align: left;
@@ -94,18 +111,121 @@
   background-color: rgb(241, 241, 241);
   padding: 25px;
 }
-.nav .icon {
+.nav__btn:hover {
+  background-color: rgba(228, 234, 246, 0.952);
+}
+.nav__icon {
   border-radius: 100%;
   padding: 5px 8px;
   background: #9356DC;
+  color: white;
   font-size: 10px;
   position: relative;
   right: -15px;
 }
-.nav .fa-3 {
+.nav__icon-fa3 {
   padding: 5px 6px;
 }
-.nav .icon-btn {
+.nav__btn-grey {
+  color: grey;
+}
+.nav__icon-btn {
   padding-left: 5px;
   padding-right: 15px;
+}
+.nav__icon-btn:hover {
+  color: #9356DC;
+}
+
+.container {
+  background-color: rgb(241, 241, 241);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+}
+.container__card {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.container__heading {
+  font-size: 25px;
+  font-family: Roboto-Bold;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.container__card {
+  border-radius: 15px;
+  background-color: white;
+}
+.container__icon {
+  position: relative;
+}
+.container__new {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #99E2D0;
+  color: #4e756b;
+  padding: 5px 20px 5px 20px;
+  font-size: 16px;
+  font-family: Roboto-Regular;
+}
+.container__img {
+  border-radius: 15px 15px 0 0;
+  height: 160px;
+}
+.container__text {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 20px;
+  padding-top: 12px;
+}
+.container__title {
+  font-size: 18px;
+  font-family: Roboto-bold;
+}
+.container__byline {
+  font-size: 18px;
+  font-family: Roboto-Thin;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  padding-top: 5px;
+}
+.container__heart {
+  position: absolute;
+  font-size: 25px;
+  color: rgb(123, 122, 122);
+  transition: opacity 1s ease-in-out;
+  top: 15px;
+  right: 20px;
+}
+.container__heart:hover {
+  opacity: 0;
+}
+.container__heart--wrap {
+  position: relative;
+}
+
+.footer {
+  background-color: rgb(48, 47, 47);
+}
+.footer__container {
+  padding: 20px 20px 30px 20px;
+}
+.footer__logo {
+  width: 35%;
+  padding-bottom: 15px;
+}
+.footer__flex, .footer__flex2 {
+  display: flex;
+  align-items: center;
+}
+.footer__text {
+  font-size: 16px;
+  font-family: Roboto-Regular;
+  color: white;
+  line-height: 25px;
+}
+.footer__icon {
+  padding-right: 10px;
 }/*# sourceMappingURL=main.css.map */

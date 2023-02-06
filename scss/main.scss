@@ -1,3 +1,6 @@
-@import "./resets","./typography";
-@import "./variables","./mixins";
-@import "./homepage";
+@import"./base/norms";
+@import"./base/typography";
+@import"./utils/variables";
+@import"./utils/mixins";
+@import"./components/spinner";
+@import"./pages/homepage";
