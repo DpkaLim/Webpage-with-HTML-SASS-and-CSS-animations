@@ -73,14 +73,17 @@ img {
   font-family: Roboto-bold;
   border-radius: 40px;
   color: white;
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-image: linear-gradient(to right, #FF79DA, #9356DC, #f892db, #a07acf);
   box-shadow: 0 5px 8px 2px lightgrey;
   border-style: none;
+  background-size: 300%;
+  background-position: left;
   cursor: pointer;
+  transition: background-position 500ms;
   padding: 15px 25px;
 }
 .header__mainbtn:hover {
-  background-image: linear-gradient(#a07acf, #f892db);
+  background-position: right;
   box-shadow: 2px 2px 6px 2px #a07acf;
 }
 
@@ -202,10 +205,6 @@ img {
 .container__heart:hover {
   opacity: 0;
 }
-.container__heart--wrap {
-  position: relative;
-}
-
 .footer {
   background-color: rgb(48, 47, 47);
 }

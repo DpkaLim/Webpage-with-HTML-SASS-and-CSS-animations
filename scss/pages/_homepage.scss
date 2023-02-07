@@ -133,10 +133,10 @@
         @include heart;
         top: 15px;
         right: 20px;
-
+        @include heart-top
     }
-    &__heart--wrap {
-        position:relative;
+    &__bottom {
+    
     }
 }
 .footer {
