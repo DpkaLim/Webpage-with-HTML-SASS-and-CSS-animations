@@ -4,9 +4,11 @@
     right: 15px;
     top: 10px;
 }
-.heart-items i {
+.fa-heart {
     color: grey;
     font-size: 25px;
+}
+.heart-items i {
     transition: opacity 1s ease-in-out;
 }
 .heart-fill {

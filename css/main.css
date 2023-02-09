@@ -29,6 +29,10 @@ a:visited {
   src: url("/fonts/Roboto/Roboto-Thin.ttf") format(ttf);
 }
 @font-face {
+  font-family: "Roboto-Light", Times, serif;
+  src: url("/fonts/Roboto/Roboto-Light.ttf") format(ttf);
+}
+@font-face {
   font-family: "Roboto-Regular", Times, serif;
   src: url("/fonts/Roboto/Roboto-Regular.ttf") format(ttf);
 }
@@ -46,9 +50,12 @@ a:visited {
   top: 10px;
 }
 
-.heart-items i {
+.fa-heart {
   color: grey;
   font-size: 25px;
+}
+
+.heart-items i {
   transition: opacity 1s ease-in-out;
 }
 
@@ -61,6 +68,24 @@ a:visited {
 
 .heart-fill:hover {
   opacity: 1;
+}
+
+.header__logo {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  width: 45%;
+}
+.header__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.header__arrow {
+  position: absolute;
+  left: 25px;
+  top: 22px;
+  font-size: 20px;
 }
 
 .footer {
@@ -93,14 +118,85 @@ a:visited {
   padding-right: 10px;
 }
 
+#menu__heart {
+  position: absolute;
+  right: 15px;
+  top: 35px;
+}
+
+.menu {
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+  background: rgb(241, 241, 241);
+  border-radius: 30px 30px 0 0;
+  z-index: 999;
+  position: relative;
+  margin-top: -45px;
+}
+.menu__header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.menu__heading {
+  font-weight: 100;
+  font-size: 25px;
+  font-family: Shrikhand-Regular;
+}
+.menu__btn--wrap {
+  text-align: center;
+}
+.menu__btn {
+  padding: 15px 70px;
+  font-size: 16px;
+  font-family: Roboto-Regular;
+  border-radius: 40px;
+  color: white;
+  background-image: linear-gradient(to right, #9356DC, #FF79DA, #a976de, #f892db);
+  box-shadow: 0 5px 8px 2px lightgrey;
+  border-style: none;
+  background-size: 300%;
+  background-position: left;
+  cursor: pointer;
+  transition: background-position 500ms;
+}
+.menu__btn:hover {
+  background-position: right;
+  box-shadow: 0 4px 12px #a976de;
+}
+
+.dishes__container {
+  background: white;
+  border-radius: 15px;
+  padding: 10px 20px 10px 10px;
+  margin: 10px 0 12px 0;
+}
+.dishes__wrap {
+  padding: 10px 0 20px 0;
+}
+.dishes__heading {
+  font-weight: 100;
+  font-size: 16px;
+  font-family: Roboto-Light;
+}
+.dishes__byline {
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-family: Roboto-Regular;
+}
+.dishes__byline--flex {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-family: Roboto-Light;
+}
+
 .header {
   text-align: center;
   flex-wrap: wrap;
-}
-.header__logo {
-  padding-top: 20px;
-  padding-bottom: 10px;
-  width: 45%;
 }
 .header__location {
   font-size: 16px;

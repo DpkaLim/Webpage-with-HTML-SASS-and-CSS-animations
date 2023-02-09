@@ -1,73 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <title>ohmyfood homepage</title>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="./css/main.css">
-      <link href="/normalize.css" type="text/css" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    </head>
-    <body>
+
+<head>
+    <title>ohmyfood homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="/normalize.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
     <header class="header">
-        <nav class="nav"> 
-            <i class="fa-solid fa-arrow-left nav__arrow"></i>
-            <img class="nav__logo" src="images/logo/ohmyfood.png" sizes="100vw" alt="logo"
-            srcset="images/logo/ohmyfood.png 320w,images/logo/ohmyfood.png 480w,images/logo/ohmyfood@2x.svg 760w,images/logo/ohmyfood@2x.svg 992w">
-        </nav>
-        <img class="nav__photo" src="./images/restaurants/palette.jpg" alt="The Full Palette">
+        <div class="header__flex">
+            <a href="index.html"><i class="fa-solid fa-arrow-left header__arrow"></i></a>
+            <img class="header__logo" src="images/logo/ohmyfood.png" sizes="100vw" alt="logo"
+                srcset="images/logo/ohmyfood.png 320w,images/logo/ohmyfood.png 480w,images/logo/ohmyfood@2x.svg 760w,images/logo/ohmyfood@2x.svg 992w">
+        </div>
+        <img class="header__photo" src="./images/restaurants/palette.jpg" alt="The Full Palette">
     </header>
-    <section class="menu"> 
-        <div class="menu__header"> 
+    <section class="menu">
+        <div class="menu__header">
             <h1 class="menu__heading">The Full palette</h1>
-            <i class="fa-regular fa-heart menu__heart"></i>
+            <!-- <i class="fa-regular fa-heart menu__heart"></i> -->
+            <div id="menu__heart" class="fa-stack heart-items">
+                <i class="fa-regular fa-heart fa-stack-1x heart-empty"></i>
+                <i class="fa-solid fa-heart fa-stack-1x heart-fill"></i>
+            </div>
         </div>
         <div class="dishes">
             <h2 class="dishes__heading">ENTREES</h2>
-            <div class="dishes__container">
-                <p class="dishes__byline">Escargot</p>
-                <p class="dishes__byline--flex">With southern French spices <strong>25€</strong></p>
-            </div>
-            <div class="dishes__container">
-                <p class="dishes__byline">Duck Foie Grast</p>
-                <p class="dishes__byline--flex">With black truffle shavings <strong>35€</strong></p>
-            </div>
-            <div class="dishes__container">
-                <p class="dishes__byline">Fried egg</p>
-                <p class="dishes__byline--flex">Seasoned with truffle cream and...<strong>20€</strong></p>
+            <div class="dishes__wrap">
+                <div class="dishes__container">
+                    <p class="dishes__byline">Escargot</p>
+                    <p class="dishes__byline--flex">With southern French spices <strong>25€</strong></p>
+                </div>
+                <div class="dishes__container">
+                    <p class="dishes__byline">Duck Foie Grast</p>
+                    <p class="dishes__byline--flex">With black truffle shavings <strong>35€</strong></p>
+                </div>
+                <div class="dishes__container">
+                    <p class="dishes__byline">Fried egg</p>
+                    <p class="dishes__byline--flex">Seasoned with truffle cream and...<strong>20€</strong></p>
+                </div>
             </div>
             <h2 class="dishes__heading">MAIN DISH</h2>
-            <div class="dishes__container">
-                <p class="dishes__byline">Herb-Encrusted Steak</p>
-                <p class="dishes__byline--flex">With delicately sliced and seasoned veg...<strong>40€</strong></p>
-            </div>
-            <div class="dishes__container">
-                <p class="dishes__byline">Ox Tail Shepard's Pie</p>
-                <p class="dishes__byline--flex">With black truffle and pureed parsnips<strong>35€</strong></p>
-            </div>
-            <div class="dishes__container">
-                <p class="dishes__byline">Filet of sole</p>
-                <p class="dishes__byline--flex">With citrus dressing<strong>44€</strong></p>
+            <div class="dishes__wrap">
+                <div class="dishes__container">
+                    <p class="dishes__byline">Herb-Encrusted Steak</p>
+                    <p class="dishes__byline--flex">With delicately sliced and seasoned veg...<strong>40€</strong></p>
+                </div>
+                <div class="dishes__container">
+                    <p class="dishes__byline">Ox Tail Shepard's Pie</p>
+                    <p class="dishes__byline--flex">With black truffle and pureed parsnips<strong>35€</strong></p>
+                </div>
+                <div class="dishes__container">
+                    <p class="dishes__byline">Filet of sole</p>
+                    <p class="dishes__byline--flex">With citrus dressing<strong>44€</strong></p>
+                </div>
             </div>
             <h2 class="dishes__heading">DESSERTS</h2>
-            <div class="dishes__container">
-                <p class="dishes__byline">Paris-Brest</p>
-                <p class="dishes__byline--flex">Revisted<strong>18€</strong></p>
+            <div class="dishes__wrap">
+                <div class="dishes__container">
+                    <p class="dishes__byline">Paris-Brest</p>
+                    <p class="dishes__byline--flex">Revisted<strong>18€</strong></p>
+                </div>
+                <div class="dishes__container">
+                    <p class="dishes__byline">Chocolate Macaroons</p>
+                    <p class="dishes__byline--flex">With vanilla ice cream <strong>22€</strong></p>
+                </div>
+                <div class="dishes__container">
+                    <p class="dishes__byline">Chocolate Mousse</p>
+                    <p class="dishes__byline--flex">With spices and black truffle<strong>23€</strong></p>
+                </div>
             </div>
-            <div class="dishes__container">
-                <p class="dishes__byline">Chocolate Macaroons</p>
-                <p class="dishes__byline--flex">With vanilla ice cream <strong>22€</strong></p>
-            </div>
-            <div class="dishes__container">
-                <p class="dishes__byline">Chocolate Mousse</p>
-                <p class="dishes__byline--flex">With spices and black truffle<strong>23€</strong></p>
-            </div>
+        </div>
+        <div class="menu__btn--wrap">
+            <button class="menu__btn">Order</button>
         </div>
     </section>
     <footer class="footer">
         <div class="footer__container">
-            <img class="footer__logo" src="images/logo/ohmyfood.png" sizes="100vw" alt="logo"
-            srcset="images/logo/ohmyfood.png 320w,images/logo/ohmyfood.png 480w,images/logo/ohmyfood@2x.svg 760w,images/logo/ohmyfood@2x.svg 992w">
+            <div class="footer__header">ohmyfood</div>
+            <!-- <img class="footer__logo" src="images/logo/ohmyfood.png" sizes="100vw" alt="logo"
+            srcset="images/logo/ohmyfood.png 320w,images/logo/ohmyfood.png 480w,images/logo/ohmyfood@2x.svg 760w,images/logo/ohmyfood@2x.svg 992w"> -->
             <div class="footer__text">
                 <div class="footer__flex">
                     <i class="fa-solid fa-utensils footer__icon"></i>
@@ -78,10 +94,13 @@
                     <p class="footer__p">Become a partner</p>
                 </div>
                 <p class="footer__p">Legal</p>
-                <p class="footer__p">Contact</p>
+                <a href="mailto:customerservice@ohmyfood.com">
+                    <p class="footer__p">Contact</p>
+                </a>
             </div>
         </div>
     </footer>
 
-    </body>
+</body>
+
 </html>

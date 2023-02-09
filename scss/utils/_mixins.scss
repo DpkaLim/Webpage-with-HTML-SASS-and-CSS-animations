@@ -1,9 +1,3 @@
-@mixin logo {
-    padding-top: 20px;
-    padding-bottom: 10px;
-    width: 45%;
-}
-
 @mixin location-font {
     font-size: 16px;
     font-family: Roboto-Regular;
@@ -27,6 +21,16 @@
 @mixin logo-font {
     font-size: 17px;
     font-family: Shrikhand-Regular;
+}
+
+@mixin menutitle-font {
+    font-size: 25px;
+    font-family: Shrikhand-Regular;
+}
+
+@mixin menu-font {
+    font-size: 16px;
+    font-family: Roboto-Light;
 }
 
 @mixin main-button {

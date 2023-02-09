@@ -1,0 +1,20 @@
+.header {
+    &__logo {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        width: 45%;
+    }
+    &__flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    &__arrow {
+        position: absolute;
+        left: 25px;
+        top: 22px;
+        font-size: 20px;
+    }
+}
+
