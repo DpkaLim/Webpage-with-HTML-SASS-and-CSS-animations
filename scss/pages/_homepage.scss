@@ -69,10 +69,6 @@
         &:hover {
             background-color: $hv3-colour;
         }
-
-        @include mobile-only {
-            width: 90%;
-        }
     }
 
     &__icon {

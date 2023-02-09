@@ -267,6 +267,7 @@ a:visited {
   margin-bottom: 20px;
 }
 .nav__btn {
+  width: 90%;
   border-radius: 20px;
   text-align: left;
   border-style: none;
@@ -279,11 +280,6 @@ a:visited {
 }
 .nav__btn:hover {
   background-color: rgba(228, 234, 246, 0.952);
-}
-@media screen and (max-width: 767px) {
-  .nav__btn {
-    width: 90%;
-  }
 }
 .nav__icon {
   border-radius: 100%;
