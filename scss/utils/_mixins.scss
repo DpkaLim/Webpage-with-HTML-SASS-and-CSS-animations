@@ -1,66 +1,73 @@
-@mixin logo{
+@mixin logo {
     padding-top: 20px;
     padding-bottom: 10px;
     width: 45%;
 }
-@mixin location-font{
-    font-size: 16px;  
+
+@mixin location-font {
+    font-size: 16px;
     font-family: Roboto-Regular;
 }
-@mixin header-font{
+
+@mixin header-font {
     font-size: 25px;
     font-family: Roboto-Bold;
 }
-@mixin text-font{
-    font-size: 18px;  
+
+@mixin text-font {
+    font-size: 18px;
     font-family: Roboto-bold;
 }
-@mixin byline-font{
-    font-size: 18px;  
+
+@mixin byline-font {
+    font-size: 18px;
     font-family: Roboto-Thin;
 }
+
+@mixin logo-font {
+    font-size: 17px;
+    font-family: Shrikhand-Regular;
+}
+
 @mixin main-button {
-    @include text-font;
+    @include location-font;
     border-radius: 40px;
     color: white;
-    background-image: linear-gradient(to right, $secondary-colour, $primary-colour, $hv2-colour, $hv1-colour);
+    background-image: linear-gradient(to right, $primary-colour, $secondary-colour, $hv1-colour, $hv2-colour);
     box-shadow: 0 5px 8px 2px lightgrey;
     border-style: none;
     background-size: 300%;
-    background-position:left;
+    background-position: left;
     cursor: pointer;
     transition: background-position 500ms;
+
     &:hover {
-        background-position:right;
-        box-shadow: 2px 2px 6px 2px $hv1-colour;
-        }
+        background-position: right;
+        box-shadow: 0 4px 12px $hv1-colour;
+    }
 }
+
 @mixin nav-btn {
     border-radius: 20px;
-    width: 90%;
     text-align: left;
     border-style: none;
     cursor: pointer;
 }
-@mixin heart {
-        position: absolute;
-        font-size: 25px;
-        color: rgb(123, 122, 122);
-        transition: opacity 1s ease-in-out;
-}
-@mixin heart-top {
-    &:hover {
-        //background: linear-gradient($secondary-colour, $primary-colour);
-        opacity: 0;
-    }
-}
+
 @mixin desktop-only {
-    @media screen and (max-width: map-get($breakpoints, desktop)){
+    @media screen and (max-width: map-get($breakpoints, desktop)) {
         @content;
     }
 }
+
 @mixin tablet-only {
-    @media screen and (max-width: map-get($breakpoints, tablet)){
+    @media screen and (max-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
         @content;
     }
 }

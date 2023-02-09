@@ -1,62 +1,84 @@
-
 .header {
     text-align: center;
     flex-wrap: wrap;
+
     &__logo {
         @include logo;
     }
+
     &__location {
         @include location-font;
         display: flex;
         justify-content: center;
         text-align: center;
         gap: 15px;
-        background-color: $location-colour; 
+        background-color: $location-colour;
         padding-top: 14px;
         padding-bottom: 14px;
         padding-right: 30px;
         box-shadow: inset 0 2px 2px lightgrey;
     }
+
     &__title {
         background-color: $bg-color;
         padding: 30px 30px 50px 30px;
     }
+
     &__heading {
         @include header-font;
         padding-bottom: 35px;
     }
+
     &__byline {
         @include byline-font;
         padding-bottom: 30px;
     }
+
     &__mainbtn {
         @include main-button;
-        padding: 15px 25px;
+        padding: 15px 22px;
     }
 }
+
 .nav {
-    padding: 40px 10px 40px 20px;
-    &__heading {                                                                                                                        
-        padding-bottom: 25px; 
-        @include header-font;                                       
+    padding: 40px 10px 40px 10px;
+
+    &__heading {
+        padding-bottom: 25px;
+        padding-left: 10px;
+        @include header-font;
     }
+
     &__list {
-        padding-top: 20px;
+        padding-top: 15px;
+
+        @include desktop-only {
+            display: flex;
+            justify-content: space-between;
+        }
     }
+
     &__btn-container {
-        margin-left: -20px;
+        margin-left: -10px;
         margin-bottom: 20px;
     }
-   &__btn {
+
+    &__btn {
         @include nav-btn;
         @include location-font;
         box-shadow: 0 0 10px 2px lightgrey;
         background-color: $bg-color;
         padding: 25px;
+
         &:hover {
             background-color: $hv3-colour;
         }
+
+        @include mobile-only {
+            width: 90%;
+        }
     }
+
     &__icon {
         border-radius: 100%;
         padding: 5px 8px;
@@ -66,98 +88,95 @@
         position: relative;
         right: -15px;
     }
+
     &__icon-fa3 {
         padding: 5px 6px;
     }
+
     &__btn-grey {
         color: grey;
     }
+
     &__icon-btn {
         padding-left: 5px;
         padding-right: 15px;
+
         &:hover {
             color: $primary-colour;
         }
     }
 }
+
 .container {
     background-color: $bg-color;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 40px;
+
+    &__wrap {
+        @include desktop-only {
+            display: flex;
+            gap: 30px;
+            margin-inline: auto;
+        }
+
+        &--column1 {
+            @include desktop-only {
+                flex-grow: 1;
+            }
+        }
+    }
+
     &__card {
         margin-bottom: 20px;
         cursor: pointer;
     }
+
     &__heading {
         @include header-font;
         padding-top: 50px;
         padding-bottom: 20px;
     }
+
     &__card {
         border-radius: 15px;
         background-color: white;
     }
+
     &__icon {
         position: relative;
     }
+
     &__new {
         position: absolute;
         top: 10px;
         right: 10px;
         background-color: $tertiary-colour;
-        color: #4e756b;;
+        color: #4e756b;
         padding: 5px 20px 5px 20px;
         @include location-font;
     }
+
     &__img {
         border-radius: 15px 15px 0 0;
         height: 160px;
     }
+
     &__text {
         position: relative;
         padding-left: 15px;
         padding-right: 20px;
         padding-top: 12px;
     }
+
     &__title {
         @include text-font;
     }
+
     &__byline {
         @include byline-font;
         padding-left: 15px;
         padding-bottom: 15px;
         padding-top: 5px;
-    }
-    &__heart {
-        @include heart;
-        top: 15px;
-        right: 20px;
-        @include heart-top
-    }
-    &__bottom {
-    
-    }
-}
-.footer {
-    background-color: $hv4-colour;
-    &__container {
-        padding: 20px 20px 30px 20px;
-    }
-    &__logo {
-        width: 35%;
-        padding-bottom: 15px;
-    }
-    &__flex, &__flex2 {
-        display: flex;
-        align-items: center;
-    }
-    &__text {
-        @include location-font;
-        color: white;
-        line-height: 25px;
-    }
-    &__icon {
-        padding-right: 10px;
     }
 }

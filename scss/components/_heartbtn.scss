@@ -1,0 +1,20 @@
+
+.heart-items {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+.heart-items i {
+    color: grey;
+    font-size: 25px;
+    transition: opacity 1s ease-in-out;
+}
+.heart-fill {
+    background-image: linear-gradient($primary-colour, $secondary-colour);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+}
+.heart-fill:hover {
+    opacity: 1;
+}

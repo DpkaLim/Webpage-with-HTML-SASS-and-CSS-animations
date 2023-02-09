@@ -1,6 +1,10 @@
-@import"./base/norms";
-@import"./base/typography";
+
 @import"./utils/variables";
 @import"./utils/mixins";
+@import"./base/norms";
+@import"./base/typography";
 @import"./components/spinner";
+@import"./components/heartbtn";
+@import"./layouts/footer";
 @import"./pages/homepage";
+

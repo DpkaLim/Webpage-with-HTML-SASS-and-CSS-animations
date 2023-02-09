@@ -5,17 +5,16 @@
     <title>ohmyfood homepage</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
     <link href="/normalize.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
-</html>
-
 <body>
-    <div class="spinner spinner-hidden">
+    <!-- <div class="spinner">
         <div class="spinner__ring"></div>
-    </div>
+        <span class="spinner__text">Loading...</span>
+    </div> -->
     <div class="wrap">
         <header class="header">
             <img class="header__logo" src="images/logo/ohmyfood.png" sizes="100vw" alt="logo"
@@ -33,12 +32,14 @@
         <nav class="nav">
             <h2 class="nav__heading">How it works</h2>
             <div class="nav__list">
-                <div class="nav__btn-container">
-                    <i class="nav__icon fa-solid fa-1"></i>
-                    <button class="nav__btn"><i
-                            class="nav__btn-grey fa-solid fa-mobile-screen-button nav__icon-btn"></i> Chose a
-                        restaurant</button>
-                </div>
+                <!-- <a href="#restaurant"> -->
+                    <div class="nav__btn-container">
+                        <i class="nav__icon fa-solid fa-1"></i>
+                        <button class="nav__btn"><a href="#restaurant"><i
+                                class="nav__btn-grey fa-solid fa-mobile-screen-button nav__icon-btn"></i>
+                            Chose a restaurant</a></button>
+                    </div>
+                <!-- </a> -->
                 <div class="nav__btn-container">
                     <i class="nav__icon fa-solid fa-2"></i>
                     <button class="nav__btn"><i class="nav__btn-grey fa-solid fa-list-ul nav__icon-btn"></i> Create your
@@ -51,58 +52,75 @@
                 </div>
             </div>
         </nav>
-        <section class="container">
+        <section id="restaurant" class="container">
             <h3 class="container__heading">Restaurants</h3>
-            <div class="container__card">
-                <div class="container__icon">
-                    <img class="container__img" src="./images/restaurants/palette.jpg" alt="The Full Palette">
-                    <p class="container__new">New</p>
-                </div>
-                <div class="container__text">
-                    <p class="container__title">The Full Palette</p>
-                    <div class="container__heart--wrap">
-                        <i class="fa-solid fa-heart container__bottom container__heart"></i>
-                        <i class="fa-solid fa-heart container__top container__heart"></i>
+            <div class="container__wrap">
+                <div class="container__wrap--column1">
+                    <div class="container__card">
+                        <div class="container__icon">
+                            <img class="container__img" src="./images/restaurants/palette.jpg" alt="The Full Palette">
+                            <p class="container__new">New</p>
+                        </div>
+                        <div class="container__text">
+                            <p class="container__title">The Full Palette</p>
+                            <div class="fa-stack heart-items">
+                                <i class="fa-regular fa-heart fa-stack-1x heart-empty"></i>
+                                <i class="fa-solid fa-heart fa-stack-1x heart-fill"></i>
+                            </div>
+                        </div>
+                        <p class="container__byline">New York</p>
+                    </div>
+                    <div class="container__card">
+                        <div class="container__icon">
+                            <img class="container__img" src="./images/restaurants/enchanted.jpg"
+                                alt="The Enchanted Plate">
+                            <p class="container__new">New</p>
+                        </div>
+                        <div class="container__text">
+                            <p class="container__title">The Enchanted Plate</p>
+                            <div class="fa-stack heart-items">
+                                <i class="fa-regular fa-heart fa-stack-1x heart-empty"></i>
+                                <i class="fa-solid fa-heart fa-stack-1x heart-fill"></i>
+                            </div>
+                        </div>
+                        <p class="container__byline">New York</p>
                     </div>
                 </div>
-                <p class="container__byline">New York</p>
-            </div>
-            <div class="container__card">
-                <div class="container__icon">
-                    <img class="container__img" src="./images/restaurants/enchanted.jpg" alt="The Enchanted Plate">
-                    <p class="container__new">New</p>
+                <div class="container__wrap--column1">
+                    <div class="container__card">
+                        <div class="container__icon">
+                            <img class="container__img" src="./images/restaurants/bastille.jpg" alt="Bastille">
+                        </div>
+                        <div class="container__text">
+                            <p class="container__title">Bastille</p>
+                            <div class="fa-stack heart-items">
+                                <i class="fa-regular fa-heart fa-stack-1x heart-empty"></i>
+                                <i class="fa-solid fa-heart fa-stack-1x heart-fill"></i>
+                            </div>
+                        </div>
+                        <p class="container__byline">New York</p>
+                    </div>
+                    <div class="container__card">
+                        <div class="container__icon">
+                            <img class="container__img" src="./images/restaurants/gourmand.jpg" alt="Le Gourmand">
+                        </div>
+                        <div class="container__text">
+                            <p class="container__title">Le Gourmand</p>
+                            <div class="fa-stack heart-items">
+                                <i class="fa-regular fa-heart fa-stack-1x heart-empty"></i>
+                                <i class="fa-solid fa-heart fa-stack-1x heart-fill"></i>
+                            </div>
+                        </div>
+                        <p class="container__byline">New York</p>
+                    </div>
                 </div>
-                <div class="container__text">
-                    <p class="container__title">The Enchanted Plate</p>
-                    <i class="fa-regular fa-heart container__heart"></i>
-                </div>
-                <p class="container__byline">New York</p>
-            </div>
-            <div class="container__card">
-                <div class="container__icon">
-                    <img class="container__img" src="./images/restaurants/bastille.jpg" alt="Bastille">
-                </div>
-                <div class="container__text">
-                    <p class="container__title">Bastille</p>
-                    <i class="fa-regular fa-heart container__heart"></i>
-                </div>
-                <p class="container__byline">New York</p>
-            </div>
-            <div class="container__card">
-                <div class="container__icon">
-                    <img class="container__img" src="./images/restaurants/gourmand.jpg" alt="Le Gourmand">
-                </div>
-                <div class="container__text">
-                    <p class="container__title">Le Gourmand</p>
-                    <i class="fa-regular fa-heart container__heart"></i>
-                </div>
-                <p class="container__byline">New York</p>
             </div>
         </section>
         <footer class="footer">
             <div class="footer__container">
-                <img class="footer__logo" src="images/logo/ohmyfood.png" sizes="100vw" alt="logo"
-                    srcset="images/logo/ohmyfood.png 320w,images/logo/ohmyfood.png 480w,images/logo/ohmyfood@2x.svg 760w,images/logo/ohmyfood@2x.svg 992w">
+                <div class="footer__header">ohmyfood</div>
+                <!-- <img class="footer__logo" src="images/logo/ohmyfood.png" sizes="100vw" alt="logo"
+                    srcset="images/logo/ohmyfood.png 320w,images/logo/ohmyfood.png 480w,images/logo/ohmyfood@2x.svg 760w,images/logo/ohmyfood@2x.svg 992w"> -->
                 <div class="footer__text">
                     <div class="footer__flex">
                         <i class="fa-solid fa-utensils footer__icon"></i>
@@ -113,9 +131,13 @@
                         <p class="footer__p">Become a partner</p>
                     </div>
                     <p class="footer__p">Legal</p>
-                    <p class="footer__p">Contact</p>
+                    <a href="mailto:customerservice@ohmyfood.com">
+                        <p class="footer__p">Contact</p>
+                    </a>
                 </div>
             </div>
         </footer>
     </div>
 </body>
+
+</html>

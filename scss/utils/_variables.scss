@@ -3,21 +3,19 @@ $secondary-colour: #FF79DA;
 $tertiary-colour: #99E2D0;
 $location-colour: #ecece6f6;
 $bg-color: rgb(241, 241, 241);
-$hv1-colour: #a07acf;
+$hv1-colour: #a976de;
 $hv2-colour: #f892db;
-$hv3-colour: rgba(228, 234, 246, 0.952); 
+$hv3-colour: rgba(228, 234, 246, 0.952);
 $hv4-colour: rgb(48, 47, 47);
 
 $breakpoints: (
     tablet: 768px
 );
+
 $breakpoints: (
     desktop: 1200px
 );
 
-
-
-
-
-
-
+$breakpoints: (
+    mobile: 767px
+);

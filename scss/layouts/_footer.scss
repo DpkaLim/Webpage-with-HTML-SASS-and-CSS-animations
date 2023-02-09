@@ -1,0 +1,33 @@
+.footer {
+    background-color: $hv4-colour;
+
+    &__container {
+        padding: 25px 20px 30px 25px;
+    }
+
+    &__header {
+        @include logo-font;
+        color: white;
+        padding-bottom: 15px;
+    }
+    &__logo {
+        width: 35%;
+        padding-bottom: 15px;
+    }
+
+    &__flex,
+    &__flex2 {
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        @include location-font;
+        color: white;
+        line-height: 1.5;
+    }
+
+    &__icon {
+        padding-right: 10px;
+    }
+}
