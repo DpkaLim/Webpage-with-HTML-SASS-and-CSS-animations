@@ -174,8 +174,45 @@ a:visited {
   padding: 10px 20px 10px 10px;
   margin: 10px 0 12px 0;
 }
-.dishes__wrap {
+.dishes__wrap--fast {
   padding: 10px 0 20px 0;
+  animation: fast 2s ease-in 2s;
+}
+@keyframes fast {
+  from {
+    opacity: 0;
+    transform: translatey(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}
+.dishes__wrap--slow {
+  animation: slow 2s ease-in 4s;
+}
+@keyframes slow {
+  from {
+    opacity: 0;
+    transform: translatey(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}
+.dishes__wrap--delay {
+  animation: delay 2s ease-in 6s;
+}
+@keyframes delay {
+  from {
+    opacity: 0;
+    transform: translatey(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translatey(0);
+  }
 }
 .dishes__heading {
   font-weight: 100;
