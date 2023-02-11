@@ -101,8 +101,10 @@ a:visited {
   padding-bottom: 15px;
 }
 .footer__logo {
-  width: 35%;
-  padding-bottom: 15px;
+  width: 30%;
+}
+.footer__logo path {
+  fill: white;
 }
 .footer__flex, .footer__flex2 {
   display: flex;
@@ -113,15 +115,23 @@ a:visited {
   font-family: Roboto-Regular;
   color: white;
   line-height: 1.5;
+  cursor: pointer;
 }
 .footer__icon {
   padding-right: 10px;
 }
+.footer__p:hover {
+  text-decoration: underline;
+}
 
 #menu__heart {
   position: absolute;
-  right: 15px;
+  right: 10px;
   top: 35px;
+}
+
+.header__photo {
+  height: 250px;
 }
 
 .menu {
@@ -132,6 +142,7 @@ a:visited {
   z-index: 999;
   position: relative;
   margin-top: -45px;
+  cursor: pointer;
 }
 .menu__header {
   display: flex;
@@ -143,11 +154,15 @@ a:visited {
 }
 .menu__heading {
   font-weight: 100;
+  margin-right: 100px;
+  line-height: 1.5;
   font-size: 25px;
   font-family: Shrikhand-Regular;
 }
 .menu__btn--wrap {
   text-align: center;
+  padding-top: 15px;
+  padding-bottom: 40px;
 }
 .menu__btn {
   padding: 15px 70px;
@@ -155,7 +170,7 @@ a:visited {
   font-family: Roboto-Regular;
   border-radius: 40px;
   color: white;
-  background-image: linear-gradient(to right, #9356DC, #FF79DA, #a976de, #f892db);
+  background-image: linear-gradient(to right, #FF79DA, #9356DC, #f892db, #a976de);
   box-shadow: 0 5px 8px 2px lightgrey;
   border-style: none;
   background-size: 300%;
@@ -173,9 +188,12 @@ a:visited {
   border-radius: 15px;
   padding: 10px 20px 10px 10px;
   margin: 10px 0 12px 0;
+  box-shadow: 0 0 10px lightgrey;
+}
+.dishes__wrap {
+  padding: 10px 0 20px 0;
 }
 .dishes__wrap--fast {
-  padding: 10px 0 20px 0;
   animation: fast 2s ease-in 2s;
 }
 @keyframes fast {
@@ -215,9 +233,24 @@ a:visited {
   }
 }
 .dishes__heading {
+  position: relative;
   font-weight: 100;
+  padding-top: 10px;
   font-size: 16px;
   font-family: Roboto-Light;
+}
+.dishes__heading:after {
+  content: "";
+  position: absolute;
+  background-color: #99E2D0;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+.dishes__heading:hover:after {
+  width: 10%;
 }
 .dishes__byline {
   padding-bottom: 5px;
@@ -227,7 +260,7 @@ a:visited {
 .dishes__byline--flex {
   display: flex;
   justify-content: space-between;
-  font-size: 16px;
+  font-size: 14px;
   font-family: Roboto-Light;
 }
 
@@ -267,7 +300,7 @@ a:visited {
   font-family: Roboto-Regular;
   border-radius: 40px;
   color: white;
-  background-image: linear-gradient(to right, #9356DC, #FF79DA, #a976de, #f892db);
+  background-image: linear-gradient(to right, #FF79DA, #9356DC, #f892db, #a976de);
   box-shadow: 0 5px 8px 2px lightgrey;
   border-style: none;
   background-size: 300%;
@@ -293,7 +326,7 @@ a:visited {
 .nav__list {
   padding-top: 15px;
 }
-@media screen and (max-width: ) {
+@media screen and (min-width: 1100px) {
   .nav__list {
     display: flex;
     justify-content: space-between;
@@ -302,6 +335,9 @@ a:visited {
 .nav__btn-container {
   margin-left: -10px;
   margin-bottom: 20px;
+}
+.nav__btn-container:hover {
+  transform: translate(1px);
 }
 .nav__btn {
   width: 90%;
@@ -314,6 +350,7 @@ a:visited {
   box-shadow: 0 0 10px 2px lightgrey;
   background-color: rgb(241, 241, 241);
   padding: 25px;
+  transition: 0.3s ease;
 }
 .nav__btn:hover {
   background-color: rgba(228, 234, 246, 0.952);
@@ -347,14 +384,14 @@ a:visited {
   padding-right: 20px;
   padding-bottom: 40px;
 }
-@media screen and (max-width: ) {
+@media screen and (min-width: 1100px) {
   .container__wrap {
     display: flex;
     gap: 30px;
     margin-inline: auto;
   }
 }
-@media screen and (max-width: ) {
+@media screen and (min-width: 1100px) {
   .container__wrap--column1 {
     flex-grow: 1;
   }
@@ -362,6 +399,7 @@ a:visited {
 .container__card {
   margin-bottom: 20px;
   cursor: pointer;
+  box-shadow: 0 0 10px lightgrey;
 }
 .container__heading {
   font-size: 25px;

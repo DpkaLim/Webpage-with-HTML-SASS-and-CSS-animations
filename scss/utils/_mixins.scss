@@ -29,15 +29,18 @@
 }
 
 @mixin menu-font {
+    font-size: 14px;
+    font-family: Roboto-Light;
+}
+@mixin menu-heading {
     font-size: 16px;
     font-family: Roboto-Light;
 }
-
 @mixin main-button {
     @include location-font;
     border-radius: 40px;
     color: white;
-    background-image: linear-gradient(to right, $primary-colour, $secondary-colour, $hv1-colour, $hv2-colour);
+    background-image: linear-gradient(to right, $secondary-colour, $primary-colour, $hv2-colour, $hv1-colour);
     box-shadow: 0 5px 8px 2px lightgrey;
     border-style: none;
     background-size: 300%;
@@ -60,19 +63,13 @@
 }
 
 @mixin desktop-only {
-    @media screen and (max-width: map-get($breakpoints, desktop)) {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
         @content;
     }
 }
 
 @mixin tablet-only {
-    @media screen and (max-width: map-get($breakpoints, tablet)) {
-        @content;
-    }
-}
-
-@mixin mobile-only {
-    @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
         @content;
     }
 }

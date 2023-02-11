@@ -1,9 +1,11 @@
 #menu__heart {
     position: absolute;
-    right: 15px;
+    right: 10px;
     top: 35px;
 }
-
+.header__photo {
+    height: 250px;
+}
 .menu {
     margin: 0 auto;
     padding: 0 20px 20px 20px;
@@ -12,6 +14,7 @@
     z-index: 999;
     position: relative;
     margin-top: -45px;
+    cursor: pointer;
 
     &__header {
         display: flex;
@@ -24,11 +27,15 @@
 
     &__heading {
         font-weight: 100;
+        margin-right: 100px;
+        line-height: 1.5;
         @include menutitle-font;
     }
 
     &__btn--wrap {
         text-align: center;
+        padding-top: 15px;
+        padding-bottom: 40px;
     }
 
     &__btn {
@@ -43,10 +50,14 @@
         border-radius: 15px;
         padding: 10px 20px 10px 10px;
         margin: 10px 0 12px 0;
+        box-shadow: 0 0 10px lightgrey;
+    }
+
+    &__wrap {
+        padding: 10px 0 20px 0;
     }
 
     &__wrap--fast {
-        padding: 10px 0 20px 0;
         animation: fast 2s ease-in 2s;
     }
 
@@ -78,6 +89,7 @@
             transform: translatey(0);
         }
     }
+
     &__wrap--delay {
         animation: delay 2s ease-in 6s;
     }
@@ -96,8 +108,25 @@
     }
 
     &__heading {
+        position: relative;
         font-weight: 100;
-        @include menu-font
+        padding-top: 10px;
+        @include menu-heading
+    }
+
+    &__heading:after {
+        content: "";
+        position: absolute;
+        background-color: $tertiary-colour;
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -10px;
+        transition: 0.3s;
+    }
+
+    &__heading:hover:after {
+        width: 10%;
     }
 
     &__byline {
