@@ -316,10 +316,10 @@ a:visited {
 
 .nav {
   padding: 40px 10px 40px 10px;
+  margin: 0 auto;
 }
 .nav__heading {
   padding-bottom: 25px;
-  padding-left: 10px;
   font-size: 25px;
   font-family: Roboto-Bold;
 }

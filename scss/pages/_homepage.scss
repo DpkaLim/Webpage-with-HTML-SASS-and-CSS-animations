@@ -38,10 +38,10 @@
 
 .nav {
     padding: 40px 10px 40px 10px;
+    margin: 0 auto;
 
     &__heading {
         padding-bottom: 25px;
-        padding-left: 10px;
         @include header-font;
     }
 
