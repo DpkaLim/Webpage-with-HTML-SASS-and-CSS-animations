@@ -3,9 +3,11 @@
     right: 10px;
     top: 35px;
 }
+
 .header__photo {
     height: 250px;
 }
+
 .menu {
     margin: 0 auto;
     padding: 0 20px 20px 20px;
@@ -46,9 +48,11 @@
 
 .dishes {
     &__container {
+        position: relative;
+        overflow: hidden;
         background: white;
         border-radius: 15px;
-        padding: 10px 20px 10px 10px;
+        padding: 10px 10px 10px 10px;
         margin: 10px 0 12px 0;
         box-shadow: 0 0 10px lightgrey;
     }
@@ -84,7 +88,6 @@
         }
 
         to {
-
             opacity: 1;
             transform: translatey(0);
         }
@@ -101,7 +104,6 @@
         }
 
         to {
-
             opacity: 1;
             transform: translatey(0);
         }
@@ -131,12 +133,64 @@
 
     &__byline {
         padding-bottom: 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         @include location-font
     }
 
     &__byline--flex {
-        display: flex;
-        justify-content: space-between;
-        @include menu-font
+        position: relative;
+        padding-right: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: padding 1s ease-in-out;
+        @include menu-font;
     }
+
+    &__price {
+        position: absolute;
+        left: 270px;
+        overflow: visible;
+        transition: left 1s ease-in-out;
+    }
+
+    &__container:hover &__byline--flex,
+    &__container:hover &__byline {
+        padding-right: 100px;
+    }
+
+    &__container:hover &__price {
+        left: 220px;
+    }
+
+    &__checkmark {
+        position: absolute;
+        top: 0;
+        right: -60px;
+        height: 100%;
+        width: 50px;
+        background: $tertiary-colour;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: right 1s ease-in-out;
+    }
+
+    &__container:hover &__checkmark {
+        right: (0);
+    }
+
+    &__rotate {
+        transition: rotate 1s ease-in-out;
+        rotate: (0deg);
+        color: white;
+        font-size: 20px;
+    }
+
+    &__container:hover &__checkmark {
+        rotate: (360deg);
+    }
+
 }

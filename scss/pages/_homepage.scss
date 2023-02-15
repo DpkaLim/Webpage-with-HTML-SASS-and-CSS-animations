@@ -37,7 +37,7 @@
 }
 
 .nav {
-    padding: 40px 10px 40px 10px;
+    padding: 40px 15px 40px 20px;
     margin: 0 auto;
 
     &__heading {
@@ -55,8 +55,9 @@
     }
 
     &__btn-container {
-        margin-left: -10px;
         margin-bottom: 20px;
+        position: relative;
+
         &:hover {
             transform: translate(1px);
         }
@@ -81,8 +82,9 @@
         background: $primary-colour;
         color: white;
         font-size: 10px;
-        position: relative;
-        right: -15px;
+        position: absolute;
+        left: -10px;
+        top: 25px;
     }
 
     &__icon-fa3 {
@@ -102,78 +104,71 @@
         }
     }
 }
-
-.container {
-    background-color: $bg-color;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 40px;
-
-    &__wrap {
-        @include desktop-only {
-            display: flex;
-            gap: 30px;
-            margin-inline: auto;
-        }
-
-        &--column1 {
-            @include desktop-only {
-                flex-grow: 1;
-            }
-        }
-    }
-
-    &__card {
-        margin-bottom: 20px;
-        cursor: pointer;
-        box-shadow: 0 0 10px lightgrey;
-    }
-
-    &__heading {
-        @include header-font;
-        padding-top: 50px;
-        padding-bottom: 20px;
-    }
-
-    &__card {
-        border-radius: 15px;
-        background-color: white;
-    }
-
-    &__icon {
-        position: relative;
-    }
-
-    &__new {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background-color: $tertiary-colour;
-        color: #4e756b;
-        padding: 5px 20px 5px 20px;
-        @include location-font;
-    }
-
-    &__img {
-        border-radius: 15px 15px 0 0;
-        height: 160px;
-    }
-
-    &__text {
-        position: relative;
-        padding-left: 15px;
+    .container {
+        background-color: $bg-color;
+        padding-left: 20px;
         padding-right: 20px;
-        padding-top: 12px;
-    }
+        padding-bottom: 40px;
+        
+        &__wrap {
+            // @include desktop-only {
+            //     display: flex;
+            //     gap: 30px;
+            //     margin-inline: auto;
+            // }
+            @include tablet-only {
+                width: 50%;
+             }
+        }
 
-    &__title {
-        @include text-font;
-    }
+        &__card {
+            margin-bottom: 20px;
+            cursor: pointer;
+            box-shadow: 0 0 10px lightgrey;
+            border-radius: 15px;
+            background-color: white;
+        }
 
-    &__byline {
-        @include byline-font;
-        padding-left: 15px;
-        padding-bottom: 15px;
-        padding-top: 5px;
+        &__heading {
+            @include header-font;
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+
+        &__icon {
+            position: relative;
+        }
+
+        &__new {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: $tertiary-colour;
+            color: #4e756b;
+            padding: 5px 20px 5px 20px;
+            @include location-font;
+        }
+
+        &__img {
+            border-radius: 15px 15px 0 0;
+            height: 160px;
+        }
+
+        &__text {
+            position: relative;
+            padding-left: 15px;
+            padding-right: 20px;
+            padding-top: 12px;
+        }
+
+        &__title {
+            @include text-font;
+        }
+
+        &__byline {
+            @include byline-font;
+            padding-left: 15px;
+            padding-bottom: 15px;
+            padding-top: 5px;
+        }
     }
-}
