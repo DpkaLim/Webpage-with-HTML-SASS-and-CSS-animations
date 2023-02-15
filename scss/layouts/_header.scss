@@ -3,6 +3,10 @@
         padding-top: 20px;
         padding-bottom: 10px;
         width: 45%;
+
+        @include desktop-only {
+            width: 20%;
+        }
     }
     &__flex {
         display: flex;
@@ -15,6 +19,14 @@
         left: 25px;
         top: 22px;
         font-size: 20px;
+        cursor: pointer;
+
+        @include desktop-only {
+            font-size: 30px;
+        }
+        @include tablet-only {
+            font-size: 30px;
+        }
     }
 }
 

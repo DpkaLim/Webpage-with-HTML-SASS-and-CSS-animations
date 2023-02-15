@@ -12,10 +12,23 @@
     }
 
     &__logo {
+        display: flex;
         width: 30%;
 
         & path {
             fill: white;
+        }
+
+        @include desktop-only {
+            display: flex;
+            width: 10%;
+            margin-bottom: 20px;
+        }
+
+        @include tablet-only {
+            display: flex;
+            width: 15%;
+            margin-bottom: 20px;
         }
     }
 
@@ -39,6 +52,7 @@
     &__p:hover {
         text-decoration: underline;
     }
+
     &__link {
         color: white;
         text-decoration: none;

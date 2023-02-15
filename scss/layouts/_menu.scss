@@ -6,6 +6,13 @@
 
 .header__photo {
     height: 250px;
+
+    @include desktop-only {
+        height: 350px;
+    }
+    @include tablet-only {
+        height: 300px;
+    }
 }
 
 .menu {
@@ -129,6 +136,13 @@
 
     &__heading:hover:after {
         width: 10%;
+
+        @include desktop-only {
+            width: 5%;
+        }
+        @include tablet-only {
+            width: 5%;
+        }
     }
 
     &__byline {
@@ -154,6 +168,13 @@
         left: 270px;
         overflow: visible;
         transition: left 1s ease-in-out;
+
+        @include desktop-only {
+            left: 1030px;
+        }
+        @include tablet-only {
+            left: 720px;
+        }
     }
 
     &__container:hover &__byline--flex,
@@ -163,6 +184,13 @@
 
     &__container:hover &__price {
         left: 220px;
+
+        @include desktop-only {
+            left: 970px;
+        }
+        @include tablet-only {
+            left: 650px;
+        }
     }
 
     &__checkmark {
@@ -176,21 +204,27 @@
         align-items: center;
         justify-content: center;
         transition: right 1s ease-in-out;
+
+        @include desktop-only {
+            width: 60px;
+        }
+        @include tablet-only {
+            width: 60px;
+        }
     }
 
     &__container:hover &__checkmark {
-        right: (0);
+        right: 0;
     }
 
     &__rotate {
         transition: rotate 1s ease-in-out;
-        rotate: (0deg);
+        rotate: 0deg;
         color: white;
         font-size: 20px;
     }
 
-    &__container:hover &__checkmark {
-        rotate: (360deg);
+    &__container:hover &__rotate {
+        rotate: 360deg;
     }
-
 }

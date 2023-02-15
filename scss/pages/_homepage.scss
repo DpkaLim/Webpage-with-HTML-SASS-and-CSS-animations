@@ -52,6 +52,12 @@
             display: flex;
             justify-content: space-between;
         }
+
+        @include tablet-only {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
     }
 
     &__btn-container {
@@ -74,6 +80,14 @@
         &:hover {
             background-color: $hv3-colour;
         }
+
+        &:hover .nav__icon-btn {
+            color: $primary-colour;
+        }
+
+        @include desktop-only {
+            text-align: center;
+        }
     }
 
     &__icon {
@@ -85,10 +99,20 @@
         position: absolute;
         left: -10px;
         top: 25px;
+
+        @include desktop-only {
+            padding: 8px 10px;
+            top: 0;
+        }
     }
 
     &__icon-fa3 {
         padding: 5px 6px;
+
+        @include desktop-only {
+            padding: 8px 10px;
+            top: 0;
+        }
     }
 
     &__btn-grey {
@@ -99,76 +123,107 @@
         padding-left: 5px;
         padding-right: 15px;
 
-        &:hover {
-            color: $primary-colour;
+        @include desktop-only {
+            padding-left: 0;
         }
     }
 }
-    .container {
-        background-color: $bg-color;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 40px;
-        
-        &__wrap {
-            // @include desktop-only {
-            //     display: flex;
-            //     gap: 30px;
-            //     margin-inline: auto;
-            // }
-            @include tablet-only {
-                width: 50%;
-             }
+
+.container {
+    background-color: $bg-color;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+
+    &__wrap {
+
+        @include desktop-only {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 10px;
+            padding-right: 10px;
         }
 
-        &__card {
-            margin-bottom: 20px;
-            cursor: pointer;
-            box-shadow: 0 0 10px lightgrey;
-            border-radius: 15px;
-            background-color: white;
-        }
-
-        &__heading {
-            @include header-font;
-            padding-top: 50px;
-            padding-bottom: 20px;
-        }
-
-        &__icon {
-            position: relative;
-        }
-
-        &__new {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: $tertiary-colour;
-            color: #4e756b;
-            padding: 5px 20px 5px 20px;
-            @include location-font;
-        }
-
-        &__img {
-            border-radius: 15px 15px 0 0;
-            height: 160px;
-        }
-
-        &__text {
-            position: relative;
-            padding-left: 15px;
-            padding-right: 20px;
-            padding-top: 12px;
-        }
-
-        &__title {
-            @include text-font;
-        }
-
-        &__byline {
-            @include byline-font;
-            padding-left: 15px;
-            padding-bottom: 15px;
-            padding-top: 5px;
+        @include tablet-only {
+            display: flex;
+            gap: 30px;
         }
     }
+
+    &__wrap--column1 {
+
+        @include tablet-only {
+            flex: 1;
+        }
+    }
+
+    &__card {
+        margin-bottom: 20px;
+        cursor: pointer;
+        box-shadow: 0 0 10px lightgrey;
+        border-radius: 15px;
+        background-color: white;
+
+        @include desktop-only {
+            width: 500px;
+            height: 400px;
+            box-shadow: 0 0 20px 10px lightgrey;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__heading {
+        @include header-font;
+        padding-top: 50px;
+        padding-bottom: 20px;
+
+        @include desktop-only {
+            padding-bottom: 40px;
+        }
+    }
+
+    &__icon {
+        position: relative;
+    }
+
+    &__new {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: $tertiary-colour;
+        color: #4e756b;
+        padding: 5px 20px 5px 20px;
+        @include location-font;
+    }
+
+    &__img {
+        border-radius: 15px 15px 0 0;
+        height: 160px;
+
+        @include desktop-only {
+            height: 300px;
+        }
+    }
+
+    &__text {
+        position: relative;
+        padding-left: 15px;
+        padding-right: 20px;
+        padding-top: 12px;
+
+        @include desktop-only {
+            padding-top: 20px;
+        }
+    }
+
+    &__title {
+        @include text-font;
+    }
+
+    &__byline {
+        @include byline-font;
+        padding-left: 15px;
+        padding-bottom: 15px;
+        padding-top: 5px;
+    }
+}

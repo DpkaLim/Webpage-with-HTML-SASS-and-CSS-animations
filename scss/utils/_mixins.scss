@@ -1,3 +1,4 @@
+
 @mixin location-font {
     font-size: 16px;
     font-family: Roboto-Regular;
@@ -62,14 +63,14 @@
     cursor: pointer;
 }
 
-@mixin desktop-only {
-    @media screen and (min-width: map-get($breakpoints, desktop)) {
+@mixin tablet-only {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
         @content;
     }
 }
 
-@mixin tablet-only {
-    @media screen and (min-width: map-get($breakpoints, tablet)) {
+@mixin desktop-only {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
         @content;
     }
 }
