@@ -55,18 +55,15 @@
 }
 
 .dishes {
-    &__container {
-        position: relative;
-        overflow: hidden;
-        background: white;
-        border-radius: 15px;
-        padding: 10px 10px 10px 10px;
-        margin: 10px 0 12px 0;
-        box-shadow: 0 0 10px lightgrey;
-    }
 
     &__wrap {
         padding: 10px 0 20px 0;
+
+        @include desktop-only {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
     }
 
     &__wrap--fast {
@@ -117,6 +114,23 @@
         }
     }
 
+    &__container {
+        position: relative;
+        overflow: hidden;
+        background: white;
+        border-radius: 15px;
+        padding: 10px 10px 10px 10px;
+        margin: 10px 0 12px 0;
+        box-shadow: 0 0 10px lightgrey;
+
+        @include desktop-only {
+            width: 30%;
+            height: 80px;
+            padding: 15px 0 10px 15px;
+            line-height: 1.5;
+        }
+    }
+
     &__heading {
         position: relative;
         font-weight: 100;
@@ -141,6 +155,7 @@
         @include desktop-only {
             width: 5%;
         }
+
         @include tablet-only {
             width: 5%;
         }
@@ -175,7 +190,7 @@
         }
 
         @include desktop-only {
-            left: 1080px;
+            left: 360px;
         }
     }
 
@@ -192,9 +207,9 @@
         }
 
         @include desktop-only {
-            left: 1000px;
+            left: 300px;
         }
-       
+
     }
 
     &__checkmark {
