@@ -7,11 +7,12 @@
 .header__photo {
     height: 250px;
 
-    @include desktop-only {
-        height: 350px;
-    }
     @include tablet-only {
         height: 300px;
+    }
+
+    @include desktop-only {
+        height: 350px;
     }
 }
 
@@ -169,11 +170,12 @@
         overflow: visible;
         transition: left 1s ease-in-out;
 
-        @include desktop-only {
-            left: 1030px;
-        }
         @include tablet-only {
             left: 720px;
+        }
+
+        @include desktop-only {
+            left: 1080px;
         }
     }
 
@@ -185,12 +187,14 @@
     &__container:hover &__price {
         left: 220px;
 
-        @include desktop-only {
-            left: 970px;
-        }
         @include tablet-only {
             left: 650px;
         }
+
+        @include desktop-only {
+            left: 1000px;
+        }
+       
     }
 
     &__checkmark {
@@ -205,10 +209,11 @@
         justify-content: center;
         transition: right 1s ease-in-out;
 
-        @include desktop-only {
+        @include tablet-only {
             width: 60px;
         }
-        @include tablet-only {
+
+        @include desktop-only {
             width: 60px;
         }
     }

@@ -55,22 +55,14 @@
     }
 }
 
-@mixin nav-btn {
-    width: 100%;
-    border-radius: 20px;
-    text-align: left;
-    border-style: none;
-    cursor: pointer;
-}
-
-@mixin tablet-only {
-    @media screen and (min-width: map-get($breakpoints, tablet)) {
+@mixin desktop-only {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
         @content;
     }
 }
 
-@mixin desktop-only {
-    @media screen and (min-width: map-get($breakpoints, desktop)) {
+@mixin tablet-only {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
         @content;
     }
 }

@@ -19,15 +19,15 @@
             fill: white;
         }
 
-        @include desktop-only {
-            display: flex;
-            width: 10%;
-            margin-bottom: 20px;
-        }
-
         @include tablet-only {
             display: flex;
             width: 15%;
+            margin-bottom: 20px;
+        }
+
+        @include desktop-only {
+            display: flex;
+            width: 10%;
             margin-bottom: 20px;
         }
     }

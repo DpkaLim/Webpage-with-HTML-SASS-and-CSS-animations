@@ -48,15 +48,14 @@
     &__list {
         padding-top: 15px;
 
+        @include tablet-only {
+            display: flex;
+            justify-content: space-around;
+        }
+
         @include desktop-only {
             display: flex;
             justify-content: space-between;
-        }
-
-        @include tablet-only {
-            display: flex;
-            justify-content: space-between;
-            gap: 30px;
         }
     }
 
@@ -70,8 +69,12 @@
     }
 
     &__btn {
-        @include nav-btn;
         @include location-font;
+        border-radius: 20px;
+        text-align: left;
+        border-style: none;
+        cursor: pointer;
+        width: 100%;
         box-shadow: 0 0 10px 2px lightgrey;
         background-color: $bg-color;
         padding: 25px;
@@ -85,9 +88,15 @@
             color: $primary-colour;
         }
 
+        @include tablet-only {
+            width: auto;
+        }
+
         @include desktop-only {
             text-align: center;
+            width: 290px;
         }
+
     }
 
     &__icon {
@@ -100,8 +109,12 @@
         left: -10px;
         top: 25px;
 
+        @include tablet-only {
+            top: 15px;
+        }
+
         @include desktop-only {
-            padding: 8px 10px;
+            padding: 8px 12px;
             top: 0;
         }
     }
@@ -123,8 +136,13 @@
         padding-left: 5px;
         padding-right: 15px;
 
+        @include tablet-only {
+            padding-right: 0;
+        }
+
         @include desktop-only {
-            padding-left: 0;
+            padding-right: 10px;
+
         }
     }
 }
@@ -137,13 +155,6 @@
 
     &__wrap {
 
-        @include desktop-only {
-            display: flex;
-            justify-content: space-between;
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-
         @include tablet-only {
             display: flex;
             gap: 30px;
@@ -155,6 +166,17 @@
         @include tablet-only {
             flex: 1;
         }
+
+        @include desktop-only {
+            display: flex;
+            gap: 5%;
+        }
+    }
+
+    &__wrap-flex1 {
+        @include desktop-only {
+          flex: 1;
+        }
     }
 
     &__card {
@@ -165,9 +187,7 @@
         background-color: white;
 
         @include desktop-only {
-            width: 500px;
-            height: 400px;
-            box-shadow: 0 0 20px 10px lightgrey;
+            height: 350px;
             margin-bottom: 50px;
         }
     }
@@ -201,7 +221,7 @@
         height: 160px;
 
         @include desktop-only {
-            height: 300px;
+            height: 250px;
         }
     }
 
