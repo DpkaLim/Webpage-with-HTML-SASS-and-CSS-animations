@@ -8,12 +8,14 @@
             width: 20%;
         }
     }
+
     &__flex {
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
     }
+
     &__arrow {
         position: absolute;
         left: 25px;
@@ -24,9 +26,21 @@
         @include desktop-only {
             font-size: 30px;
         }
+
         @include tablet-only {
             font-size: 30px;
         }
     }
-}
 
+    &__photo {
+        height: 250px;
+
+        @include tablet-only {
+            height: 300px;
+        }
+
+        @include desktop-only {
+            height: 350px;
+        }
+    }
+}

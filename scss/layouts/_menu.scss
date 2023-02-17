@@ -4,18 +4,6 @@
     top: 35px;
 }
 
-.header__photo {
-    height: 250px;
-
-    @include tablet-only {
-        height: 300px;
-    }
-
-    @include desktop-only {
-        height: 350px;
-    }
-}
-
 .menu {
     margin: 0 auto;
     padding: 0 20px 20px 20px;
@@ -181,35 +169,32 @@
 
     &__price {
         position: absolute;
-        left: 270px;
+        right: 10px;
         overflow: visible;
-        transition: left 1s ease-in-out;
-
-        @include tablet-only {
-            left: 720px;
-        }
+        transition: right 1s ease-in-out;
+        font-family: Roboto-Regular;
+        font-weight: 200;
 
         @include desktop-only {
-            left: 360px;
+            right: 15px;
         }
     }
 
     &__container:hover &__byline--flex,
     &__container:hover &__byline {
         padding-right: 100px;
+
+        @include desktop-only {
+            padding-right: 120px;
+        }
     }
 
     &__container:hover &__price {
-        left: 220px;
+        right: 50px;
 
         @include tablet-only {
-            left: 650px;
+            right: 80px;
         }
-
-        @include desktop-only {
-            left: 300px;
-        }
-
     }
 
     &__checkmark {
@@ -238,13 +223,18 @@
     }
 
     &__rotate {
-        transition: rotate 1s ease-in-out;
-        rotate: 0deg;
         color: white;
         font-size: 20px;
     }
 
     &__container:hover &__rotate {
-        rotate: 360deg;
+        animation: rotate 1s ease-in-out;
     }
+
+    @keyframes rotate {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
 }

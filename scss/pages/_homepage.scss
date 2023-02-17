@@ -60,11 +60,17 @@
     }
 
     &__btn-container {
+        margin-left: 10px;
+        margin-right: 10px;
         margin-bottom: 20px;
         position: relative;
 
         &:hover {
             transform: translate(1px);
+        }
+
+        @include tablet-only {
+            margin: auto;
         }
     }
 

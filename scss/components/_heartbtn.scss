@@ -13,6 +13,7 @@
 }
 .heart-fill {
     background-image: linear-gradient($primary-colour, $secondary-colour);
+    background-clip: text ;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 0;
