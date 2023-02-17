@@ -23,11 +23,16 @@
         font-size: 20px;
         cursor: pointer;
 
-        @include desktop-only {
-            font-size: 30px;
+        &:hover {
+            transform: translate(2px);
+            color: $tertiary-colour;
         }
 
         @include tablet-only {
+            font-size: 30px;
+        }
+
+        @include desktop-only {
             font-size: 30px;
         }
     }

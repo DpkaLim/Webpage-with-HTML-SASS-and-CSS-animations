@@ -181,7 +181,7 @@
 
     &__wrap-flex1 {
         @include desktop-only {
-          flex: 1;
+            flex: 1;
         }
     }
 
@@ -191,6 +191,10 @@
         box-shadow: 0 0 10px lightgrey;
         border-radius: 15px;
         background-color: white;
+
+        &:hover {
+            transform: translatey(1px);
+        }
 
         @include desktop-only {
             height: 350px;

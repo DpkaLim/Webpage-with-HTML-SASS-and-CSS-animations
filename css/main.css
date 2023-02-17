@@ -24,6 +24,10 @@ a:visited {
   color: black;
 }
 
+img:hover {
+  opacity: 0.8;
+}
+
 @font-face {
   font-family: "Roboto-Thin";
   src: url("/fonts/Roboto/Roboto-Thin.ttf");
@@ -145,12 +149,16 @@ a:visited {
   font-size: 20px;
   cursor: pointer;
 }
-@media screen and (min-width: 1100px) {
+.header__arrow:hover {
+  transform: translate(2px);
+  color: #99E2D0;
+}
+@media screen and (min-width: 768px) {
   .header__arrow {
     font-size: 30px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1100px) {
   .header__arrow {
     font-size: 30px;
   }
@@ -336,6 +344,9 @@ a:visited {
   padding: 10px 10px 10px 10px;
   margin: 10px 0 12px 0;
   box-shadow: 0 0 10px lightgrey;
+}
+.dishes__container:hover {
+  transform: translatey(-2px);
 }
 @media screen and (min-width: 1100px) {
   .dishes__container {
@@ -660,6 +671,9 @@ a:visited {
   box-shadow: 0 0 10px lightgrey;
   border-radius: 15px;
   background-color: white;
+}
+.container__card:hover {
+  transform: translatey(1px);
 }
 @media screen and (min-width: 1100px) {
   .container__card {

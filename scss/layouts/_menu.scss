@@ -111,6 +111,10 @@
         margin: 10px 0 12px 0;
         box-shadow: 0 0 10px lightgrey;
 
+        &:hover {
+            transform: translatey(-2px);
+        }
+
         @include desktop-only {
             width: 30%;
             height: 80px;
