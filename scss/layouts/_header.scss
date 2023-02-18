@@ -48,4 +48,38 @@
             height: 350px;
         }
     }
+
+    &__photo1 {
+        object-position: 100% 65%;
+    }
+
+    &__photo2 {
+        @include tablet-only {
+            object-position: 100% 90%;
+        }
+
+        @include desktop-only {
+            object-position: 100% 65%;
+        }
+    }
+
+    &__photo3 {
+        @include tablet-only {
+            object-position: 100% 60%;
+        }
+
+        @include desktop-only {
+            object-position: 100% 60%;
+        }
+    }
+
+    &__photo4 {
+        @include tablet-only {
+            object-position: 100% 80%;
+        }
+
+        @include desktop-only {
+            object-position: 100% 70%;
+        }
+    }
 }

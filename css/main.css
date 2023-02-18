@@ -22,10 +22,7 @@ a {
 
 a:visited {
   color: black;
-}
-
-img:hover {
-  opacity: 0.8;
+  text-decoration: none;
 }
 
 @font-face {
@@ -176,6 +173,46 @@ img:hover {
     height: 350px;
   }
 }
+.header__photo1 {
+  -o-object-position: 100% 65%;
+     object-position: 100% 65%;
+}
+@media screen and (min-width: 768px) {
+  .header__photo2 {
+    -o-object-position: 100% 90%;
+       object-position: 100% 90%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .header__photo2 {
+    -o-object-position: 100% 65%;
+       object-position: 100% 65%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__photo3 {
+    -o-object-position: 100% 60%;
+       object-position: 100% 60%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .header__photo3 {
+    -o-object-position: 100% 60%;
+       object-position: 100% 60%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__photo4 {
+    -o-object-position: 100% 80%;
+       object-position: 100% 80%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .header__photo4 {
+    -o-object-position: 100% 70%;
+       object-position: 100% 70%;
+  }
+}
 
 .footer {
   background-color: rgb(48, 47, 47);
@@ -275,7 +312,7 @@ img:hover {
   border-radius: 40px;
   color: white;
   background-image: linear-gradient(to right, #FF79DA, #9356DC, #f892db, #a976de);
-  box-shadow: 0 5px 8px 2px lightgrey;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-style: none;
   background-size: 300%;
   background-position: left;
@@ -508,7 +545,7 @@ img:hover {
   border-radius: 40px;
   color: white;
   background-image: linear-gradient(to right, #FF79DA, #9356DC, #f892db, #a976de);
-  box-shadow: 0 5px 8px 2px lightgrey;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-style: none;
   background-size: 300%;
   background-position: left;
@@ -668,9 +705,9 @@ img:hover {
 .container__card {
   margin-bottom: 20px;
   cursor: pointer;
-  box-shadow: 0 0 10px lightgrey;
   border-radius: 15px;
   background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .container__card:hover {
   transform: translatey(1px);
@@ -709,9 +746,46 @@ img:hover {
   border-radius: 15px 15px 0 0;
   height: 160px;
 }
+.container__img:hover {
+  opacity: 0.8;
+}
 @media screen and (min-width: 1100px) {
   .container__img {
     height: 250px;
+  }
+}
+.container__img1 {
+  -o-object-position: 100% 40%;
+     object-position: 100% 40%;
+}
+@media screen and (min-width: 1100px) {
+  .container__img1 {
+    -o-object-position: 60% 100%;
+       object-position: 60% 100%;
+  }
+}
+.container__img2 {
+  -o-object-position: 100% 60%;
+     object-position: 100% 60%;
+}
+.container__img3 {
+  -o-object-position: 100% 80%;
+     object-position: 100% 80%;
+}
+@media screen and (min-width: 1100px) {
+  .container__img3 {
+    -o-object-position: 15% 100%;
+       object-position: 15% 100%;
+  }
+}
+.container__img4 {
+  -o-object-position: 100% 80%;
+     object-position: 100% 80%;
+}
+@media screen and (min-width: 1100px) {
+  .container__img4 {
+    -o-object-position: 50% 100%;
+       object-position: 50% 100%;
   }
 }
 .container__text {

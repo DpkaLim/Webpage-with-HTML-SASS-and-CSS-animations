@@ -188,9 +188,10 @@
     &__card {
         margin-bottom: 20px;
         cursor: pointer;
-        box-shadow: 0 0 10px lightgrey;
+        // box-shadow: 0 0 10px lightgrey;
         border-radius: 15px;
         background-color: white;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 
         &:hover {
             transform: translatey(1px);
@@ -230,8 +231,40 @@
         border-radius: 15px 15px 0 0;
         height: 160px;
 
+        &:hover {
+            opacity: .8;
+        }
+
         @include desktop-only {
             height: 250px;
+        }
+    }
+
+    &__img1 {
+        object-position: 100% 40%;
+
+        @include desktop-only {
+            object-position: 60% 100%;
+        }
+    }
+
+    &__img2 {
+        object-position: 100% 60%;
+    }
+
+    &__img3 {
+        object-position: 100% 80%;
+
+        @include desktop-only {
+            object-position: 15% 100%;
+        }
+    }
+
+    &__img4 {
+        object-position: 100% 80%;
+
+        @include desktop-only {
+            object-position: 50% 100%;
         }
     }
 
