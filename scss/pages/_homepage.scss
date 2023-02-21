@@ -1,7 +1,4 @@
 .header {
-    text-align: center;
-    flex-wrap: wrap;
-
     &__location {
         @include location-font;
         display: flex;

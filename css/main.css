@@ -124,6 +124,10 @@ a:visited {
   opacity: 1;
 }
 
+.header {
+  text-align: center;
+  flex-wrap: wrap;
+}
 .header__logo {
   padding-top: 20px;
   padding-bottom: 10px;
@@ -509,10 +513,6 @@ a:visited {
   }
 }
 
-.header {
-  text-align: center;
-  flex-wrap: wrap;
-}
 .header__location {
   font-size: 16px;
   font-family: Roboto-Regular;
