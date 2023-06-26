@@ -4,7 +4,7 @@ https://second-project-lime.vercel.app/
 
 Fully Responsive
 
-![image](https://github.com/DpkaLim/Webpage-with-HTML-SASS-and-CSS-animations/assets/120406810/9e7fbbb2-bc4d-4837-91c1-733a69031d7d)
+![image](https://github.com/DpkaLim/Webpage-with-HTML-SASS-and-CSS-animations/assets/120406810/96601982-60a5-4385-9898-9b9c2ec46029)
 
 Desktop version 
 
